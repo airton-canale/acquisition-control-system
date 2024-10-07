@@ -3,12 +3,12 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class SistemaAquisicoes {
-    private static ArrayList<Usuario> usuarios = new ArrayList<>();
-    private static ArrayList<Departamento> departamentos = new ArrayList<>();
-    private static ArrayList<Pedido> pedidos = new ArrayList<>();
-    private static Usuario usuarioAtual;
+    private ArrayList<Usuario> usuarios = new ArrayList<>();
+    private ArrayList<Departamento> departamentos = new ArrayList<>();
+    private ArrayList<Pedido> pedidos = new ArrayList<>();
+    private Usuario usuarioAtual;
 
-    public static void main(String[] args) {
+    public void executar() {
         inicializarDados();
         Scanner scanner = new Scanner(System.in);
 
@@ -36,7 +36,7 @@ public class SistemaAquisicoes {
         }
     }
 
-    private static void exibirMenu() {
+    private void exibirMenu() {
         System.out.println("\n--- Sistema de Aquisições ---");
         System.out.println("Usuário atual: " + (usuarioAtual != null ? usuarioAtual.getNome() : "Nenhum"));
         System.out.println("1. Escolher usuário");
@@ -46,7 +46,7 @@ public class SistemaAquisicoes {
         System.out.print("Escolha uma opção: ");
     }
 
-    private static void inicializarDados() {
+    public void inicializarDados() {
         departamentos.add(new Departamento("Financeiro", 10000));
         departamentos.add(new Departamento("RH", 8000));
         departamentos.add(new Departamento("Engenharia", 15000));
@@ -62,7 +62,7 @@ public class SistemaAquisicoes {
         usuarioAtual = usuarios.get(0);
     }
 
-    private static void escolherUsuario(Scanner scanner) {
+    private void escolherUsuario(Scanner scanner) {
         System.out.println("\nEscolha um usuário:");
         for (int i = 0; i < usuarios.size(); i++) {
             System.out.println((i + 1) + ". " + usuarios.get(i));
@@ -77,7 +77,7 @@ public class SistemaAquisicoes {
         }
     }
 
-    private static void registrarPedido(Scanner scanner) {
+    private void registrarPedido(Scanner scanner) {
         if (usuarioAtual == null || usuarioAtual.isAdmin()) {
             System.out.println("Somente funcionários podem registrar pedidos.");
             return;
@@ -114,7 +114,7 @@ public class SistemaAquisicoes {
         }
     }
 
-    private static void listarPedidos() {
+    private void listarPedidos() {
         System.out.println("\n--- Pedidos Registrados ---");
         for (Pedido pedido : pedidos) {
             System.out.println(pedido);
