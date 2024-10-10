@@ -10,8 +10,8 @@ public class Main{
             Pedido pedido = new Pedido(func1);
             pedido.adicionarItem(new Item("Computador", 2000, 2));
             
-            System.out.println("Total do Pedido: " + pedido.calcularTotal());
-            pedido.aprovarPedido();
+            System.out.println("Total do Pedido: " + pedido.calcularTotalPedido());
+            pedido.aprovar();
             System.out.println("Status do Pedido: " + pedido.getStatus());
         }
     }
