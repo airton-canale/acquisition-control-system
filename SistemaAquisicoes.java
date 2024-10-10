@@ -8,7 +8,7 @@ public class SistemaAquisicoes {
     private ArrayList<Pedido> pedidos = new ArrayList<>();
     private Usuario usuarioAtual;
 
-    public void executar() {
+    public void iniciar() {
         inicializarDados();
         Scanner scanner = new Scanner(System.in);
 
