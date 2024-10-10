@@ -45,7 +45,7 @@ public class SistemaAquisicoes {
         System.out.println("0. Sair");
         System.out.print("Escolha uma opção: ");
     }
-
+//teste
     public void inicializarDados() {
         departamentos.add(new Departamento("Financeiro", 10000));
         departamentos.add(new Departamento("RH", 8000));
