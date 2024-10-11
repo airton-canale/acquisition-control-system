@@ -55,23 +55,4 @@ public class Pedido {
         return "Pedido de " + solicitante.getNome() + " - Status: " + status + " - Total: " + calcularTotalPedido();
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-   public ArrayList<Item> getItens() {
-       return itens;
-   }
-
-   public Date getDataPedido() {
-       return dataPedido;
-   }
-   public Usuario getSolicitante() {
-       return solicitante;
-   }
-
-public void rejeitar() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'rejeitar'");
-}
 }
