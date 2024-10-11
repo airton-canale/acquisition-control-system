@@ -1,5 +1,5 @@
 <p align="center">
-<img margin-left= "300px" src="./image.jpeg" alt="Banner">
+<img margin-left= "300px" src="../image.jpeg" alt="Banner">
 </p>  
 <h1 align="center"><strong></strong></h1>
 <h1 align="center"><strong>Acquisition Control System</strong></h1>
